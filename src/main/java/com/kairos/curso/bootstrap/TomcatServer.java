@@ -8,8 +8,6 @@ import com.kairos.curso.servlet.DemoServlet;
 
 public class TomcatServer {
 	
-	
-	
 	public void start() throws LifecycleException {
 		
 		final Tomcat server = new Tomcat();
