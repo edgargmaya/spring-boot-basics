@@ -1,5 +1,7 @@
 package com.kairos.curso.bootstrap;
 
+import javax.annotation.PostConstruct;
+
 import org.apache.catalina.Context;
 import org.apache.catalina.LifecycleException;
 import org.apache.catalina.startup.Tomcat;
@@ -8,6 +10,7 @@ import com.kairos.curso.servlet.DemoServlet;
 
 public class TomcatServer {
 	
+	@PostConstruct
 	public void start() throws LifecycleException {
 		
 		final Tomcat server = new Tomcat();
