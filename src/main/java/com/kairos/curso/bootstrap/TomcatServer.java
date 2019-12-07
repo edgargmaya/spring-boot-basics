@@ -10,6 +10,10 @@ import com.kairos.curso.servlet.DemoServlet;
 
 public class TomcatServer {
 	
+	/*
+	 * Nota: Utilizamos la notación lambda introducida en Java 8 para la creación del hilo
+	 */
+	
 	@PostConstruct
 	public void start() throws LifecycleException {
 		
@@ -22,15 +26,15 @@ public class TomcatServer {
 		myContext.addServletMappingDecoded("/saludo", "demoServlet");
 
 		server.start();
-
-		/*
-		 * COMENTARIO: FORMA TRADICIONAL EN JAVA DE CREAR OTRO HILO DE EJECUCIÓN INDEPENDIENTE AL PRINCIPAL
-		 */
-		/*
-		 * new Thread() { public void run() { server.getServer().await(); } }.run();
-		 */
-
+		
 		new Thread(() -> server.getServer().await()).run();
+		
+//		new Thread() {
+//			public void run() {
+//				server.getServer().await();
+//			}
+//		}.run();
+		
 	}
 
 }

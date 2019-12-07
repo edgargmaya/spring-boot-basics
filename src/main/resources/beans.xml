@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+           
+  <!-- Podemos definir beans desde XML o utilizando codigo Java -->
+  <bean id="myBean" class="com.kairos.curso.Kairosero">
+  	<!-- Los bean pueden llevar info para los atributos o el ctor. -->
+  </bean>
+
+</beans>
