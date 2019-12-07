@@ -27,11 +27,11 @@ public class MainClass {
 		context.registerShutdownHook();
 		context.close();
 		
-		ConfigurableApplicationContext con = new ClassPathXmlApplicationContext(new String[] {"beans.xml"});
-		Kairosero k = con.getBean(Kairosero.class);
-		k.print();
-		
-		con.close();
+//		ConfigurableApplicationContext con = new ClassPathXmlApplicationContext(new String[] {"beans.xml"});
+//		Kairosero k = con.getBean(Kairosero.class);
+//		k.print();
+//		
+//		con.close();
 	}
 
 }
